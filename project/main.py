@@ -1,17 +1,20 @@
 import os
-import sys
+
+import data.message as msg
+import data.cover as send
+import data.lottery as machine
 
 class Program:
 
     def __init__(self):
         self.run = 1
-        self.main()
 
-    def __del__(self):
-        print("\nMessage: The program closed!")
+    def __del__(self) -> None:
+        send.Cover('msg', 'action', 0).print()
+        pass
 
     def status(self):
-        step = input("\nDo you want close program (Yes or No)?\n")
+        step = input(msg.reportDict['request'][0])
 
         clear = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
 
@@ -20,7 +23,7 @@ class Program:
         elif(step == "No"):
             clear()
         else:
-            print("\nMessage: Try another option!")
+            send.Cover('msg', 'action', 1).print()
             self.status()
 
     def main(self):
@@ -28,10 +31,11 @@ class Program:
         while self.run == 1:
 
             try:
-                pass
+                lottery = machine.Lottery('Simple', 5, 2, 5)
+                lottery.bet()
 
             except:
-                pass
+                send.Cover('null', 'error', 0).printr()
                 
             finally:
                 self.status()
