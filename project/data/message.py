@@ -7,7 +7,7 @@ reportDict = {
     "null": [
         "",
     ],
-    "action": [
+    "program": [
         "The program closed!\n",
         "Try another option!",
     ],
