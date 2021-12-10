@@ -1,44 +1,56 @@
 import os
 
-import data.message as msg
-import data.cover as send
-import data.lottery as machine
+import data.game as Class
 
-class Program:
+class Program(Class.Game):
 
     def __init__(self):
-        self.run = 1
+        self.state = 1
 
     def __del__(self) -> None:
-        send.Cover('msg', 'action', 0).print()
-        pass
+        super().__del__()
+        self.print('msg', 'program', 0)
 
-    def status(self):
-        step = input(msg.reportDict['request'][0])
-
+    def confirme(self):
+        step = input(self.message.reportDict['request'][2])
+        
         clear = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
 
         if(step == "Yes"):
-            self.run = 0
+            self.state = 0
         elif(step == "No"):
             clear()
         else:
-            send.Cover('msg', 'action', 1).print()
-            self.status()
+            self.print('msg', 'program', 1)
+            self.confirme()
 
-    def main(self):
+    def run(self):
 
-        while self.run == 1:
+        while self.state == 1:
 
             try:
-                lottery = machine.Lottery('Simple', 5, 2, 5)
-                lottery.bet()
+                name = input(self.message.reportDict['request'][0])
+                times = input(self.message.reportDict['request'][1])
 
+                if name == "1":
+                    Class.Game('Simple', int(times), 5, 2).bet()
+
+                if name == "2":
+                    Class.Game('Multiple', int(times), 11, 5,
+                        lRandConjunt=True,
+                        lRandStar=True
+                    ).bet()
+                else:
+                    #self.print('msg', 'error', 1)
+                    pass
             except:
-                send.Cover('null', 'error', 0).printr()
-                
-            finally:
-                self.status()
+                self.error()
 
-app = Program()
-app.main()
+            finally:
+                self.confirme()
+
+def main():
+    app = Program()
+    app.run()
+
+main()
