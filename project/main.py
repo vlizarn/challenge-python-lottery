@@ -35,13 +35,12 @@ class Program(Class.Game):
                 if name == "1":
                     Class.Game('Simple', int(times), 5, 2).bet()
 
-                if name == "2":
+                elif name == "2":
                     Class.Game('Multiple', int(times), 11, 5,
                         lRandConjunt=True,
                         lRandStar=True
                     ).bet()
                 else:
-                    #self.print('msg', 'error', 1)
                     pass
             except:
                 self.error()
