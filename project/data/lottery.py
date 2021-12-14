@@ -10,26 +10,6 @@ class Lottery(Class.Cover):
     won = True
     count = 0
 
-    def __init__(
-        self,
-        lTitle = "Default",
-        lTimes = 5,
-        lTimesConjunt = 7,
-        lTimesStar = 3,
-        lMaxConjunt = 50,
-        lMaxStar = 9,
-        lRandConjunt = False,
-        lRandStar = False,
-    ):
-        self.title = lTitle
-        self.times = lTimes
-        self.timesConjunt = lTimesConjunt
-        self.timesStar = lTimesStar
-        self.maxConjunt = lMaxConjunt
-        self.maxStar = lMaxStar
-        self.randConjunt = lRandConjunt
-        self.randStar = lRandStar
-
     def __init_subclass__(
             cls,
             lTitle = "Default",
@@ -39,7 +19,7 @@ class Lottery(Class.Cover):
             lMaxConjunt = 50,
             lMaxStar = 9,
             lRandConjunt = False,
-            lRandStar = False,
+            lRandStar = False
         ):
             cls.title = lTitle
             cls.times = lTimes
