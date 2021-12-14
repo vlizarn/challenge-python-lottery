@@ -1,40 +1,55 @@
 import os
-import sys
 
-class Program:
+import data.game as Class
+
+class Program(Class.Game):
 
     def __init__(self):
-        self.run = 1
-        self.main()
+        self.state = 1
 
-    def __del__(self):
-        print("\nMessage: The program closed!")
+    def __del__(self) -> None:
+        super().__del__()
+        self.print('msg', 'program', 0)
 
-    def status(self):
-        step = input("\nDo you want close program (Yes or No)?\n")
-
+    def confirme(self):
+        step = input(self.message.reportDict['request'][2])
+        
         clear = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
 
         if(step == "Yes"):
-            self.run = 0
+            self.state = 0
         elif(step == "No"):
             clear()
         else:
-            print("\nMessage: Try another option!")
-            self.status()
+            self.print('msg', 'program', 1)
+            self.confirme()
 
-    def main(self):
+    def run(self):
 
-        while self.run == 1:
+        while self.state == 1:
 
             try:
-                pass
+                name = input(self.message.reportDict['request'][0])
+                times = input(self.message.reportDict['request'][1])
 
+                if name == "Simple":
+                    Class.Game(name, int(times), 5, 2).bet()
+
+                elif  name == "Multiple":
+                    Class.Game(name, int(times), 11, 5,
+                        lRandConjunt=True,
+                        lRandStar=True
+                    ).bet()
+                else:
+                     self.print('msg', 'error', 1)
             except:
-                pass
-                
-            finally:
-                self.status()
+                self.error()
 
-app = Program()
-app.main()
+            finally:
+                self.confirme()
+
+def main():
+    app = Program()
+    app.run()
+
+main()
