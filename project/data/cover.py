@@ -4,14 +4,15 @@ import data.message as message
 
 class Cover():
 
-    def __init__(self,
+    def __init_subclass__(
+        cls,
         lTag = 'null',
         lReport = 'null',
-        lIndex = 0,
+        lIndex = 0
     ):
-        self.tag = message.tagDict[lTag]
-        self.report = message.reportDict[lReport][lIndex]
-        self.content = self.tag + self.report
+        cls.tag = message.tagDict[lTag]
+        cls.report = message.reportDict[lReport][lIndex]
+        cls.content = cls.tag + cls.report
 
     def __del__(self) -> None:
         pass
