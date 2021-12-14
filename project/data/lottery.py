@@ -40,9 +40,7 @@ class Lottery(Class.Cover):
             lMaxStar = 9,
             lRandConjunt = False,
             lRandStar = False,
-            #**kwargs
         ):
-            #super().__init_subclass__(**kwargs),
             cls.title = lTitle
             cls.times = lTimes
             cls.timesConjunt = lTimesConjunt
