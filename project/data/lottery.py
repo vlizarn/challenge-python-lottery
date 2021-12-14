@@ -133,7 +133,6 @@ class Lottery(Class.Cover):
             else:
                 self.won = False
                 self.printStr('2', [result])
-                break
 
     def build(self):
         self.create()
