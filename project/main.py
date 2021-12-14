@@ -33,10 +33,10 @@ class Program(Class.Game):
                 times = input(self.message.reportDict['request'][1])
 
                 if name == "Simple":
-                    Class.Game('Simple', int(times), 5, 2).bet()
+                    Class.Game(name, int(times), 5, 2).bet()
 
                 elif  name == "Multiple":
-                    Class.Game('Multiple', int(times), 11, 5,
+                    Class.Game(name, int(times), 11, 5,
                         lRandConjunt=True,
                         lRandStar=True
                     ).bet()
