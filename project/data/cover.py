@@ -53,4 +53,4 @@ class Cover():
         print(library[index])  
 
     def error(self):
-        print(message.reportDict['error'][0], sys.exc_info()[0:])
+        print(message.reportDict['error'][0], sys.exc_info()[0])
