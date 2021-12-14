@@ -32,16 +32,16 @@ class Program(Class.Game):
                 name = input(self.message.reportDict['request'][0])
                 times = input(self.message.reportDict['request'][1])
 
-                if name == "1":
+                if name == "Simple":
                     Class.Game('Simple', int(times), 5, 2).bet()
 
-                elif name == "2":
+                elif  name == "Multiple":
                     Class.Game('Multiple', int(times), 11, 5,
                         lRandConjunt=True,
                         lRandStar=True
                     ).bet()
                 else:
-                    pass
+                     self.print('msg', 'error', 1)
             except:
                 self.error()
 
