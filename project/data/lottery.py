@@ -80,7 +80,7 @@ class Lottery(Class.Cover):
 
         return group
 
-    def create(self):
+    def generate(self):
         self.times = (1, self.times) [self.times > 1]
         
         def rand(data, mode):
@@ -135,7 +135,7 @@ class Lottery(Class.Cover):
                 self.printStr('2', [result])
 
     def build(self):
-        self.create()
+        self.generate()
         self.filter()
 
     def match(self):
