@@ -27,7 +27,6 @@
     <Compile Include="data\game.py" />
     <Compile Include="data\lottery.py" />
     <Compile Include="data\message.py" />
-    <Compile Include="data\module1.py" />
     <Compile Include="main.py" />
   </ItemGroup>
   <ItemGroup>
