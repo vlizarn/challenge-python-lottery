@@ -12,7 +12,7 @@ class Program(Class.Game):
         self.print('msg', 'program', 0)
 
     def confirme(self):
-        step = input(self.message.reportDict['request'][2])
+        step = input(self.message.reportDict['request'][3])
         
         clear = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
 
@@ -31,6 +31,7 @@ class Program(Class.Game):
             try:
                 name = input(self.message.reportDict['request'][0])
                 times = input(self.message.reportDict['request'][1])
+                modes = input(self.message.reportDict['request'][2]) 
 
                 if name == "Simple":
                     Class.Game(name, int(times), 5, 2).bet()
