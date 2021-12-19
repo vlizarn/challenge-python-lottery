@@ -29,15 +29,19 @@ class Program(Class.Game):
         while self.state == 1:
 
             try:
+                mode = input(self.message.reportDict['request'][2])
                 name = input(self.message.reportDict['request'][0])
-                times = input(self.message.reportDict['request'][1])
-                modes = input(self.message.reportDict['request'][2]) 
+                amount = input(self.message.reportDict['request'][1])
 
                 if name == "Simple":
-                    Class.Game(name, int(times), 5, 2).bet()
+                    Class.Game(
+                        mode,name,
+                        int(amount), 5, 2
+                ).bet()
 
                 elif  name == "Multiple":
-                    Class.Game(name, int(times), 11, 5,
+                    Class.Game(
+                        mode, name, int(amount), 11, 5,
                         lRandConjunt=True,
                         lRandStar=True
                     ).bet()
