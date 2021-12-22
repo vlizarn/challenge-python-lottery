@@ -12,6 +12,7 @@ class Lottery(Class.Cover):
 
     def __init_subclass__(
             cls,
+            lmode = "Manual",
             lTitle = "Default",
             lTimes = 5,
             lTimesConjunt = 7,
@@ -21,6 +22,7 @@ class Lottery(Class.Cover):
             lRandConjunt = False,
             lRandStar = False
         ):
+            cls.mode = lmode
             cls.title = lTitle
             cls.times = lTimes
             cls.timesConjunt = lTimesConjunt
@@ -60,13 +62,13 @@ class Lottery(Class.Cover):
 
         return group
 
-    def generate(self):
+    def generate(self, input):
         self.times = (1, self.times) [self.times > 1]
         
         def rand(data, mode):
             return (data, random.randint(1, data)) [mode == True]
 
-        def annex(data, amount = 1):
+        def annex(data, input, amount = 1):
             
             for x in range(amount):
 
@@ -115,7 +117,7 @@ class Lottery(Class.Cover):
                 self.printStr('2', [result])
 
     def build(self):
-        self.generate()
+        self.generate(input = 0)
         self.filter()
 
     def match(self):
