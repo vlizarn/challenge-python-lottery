@@ -25,9 +25,9 @@ reportDict = {
         "Error detect, Try another option!",
     ],
     "request": [
-        "\nInsert a bet mode (Simple or Multiple): ",
+        "\nInsert an input game mode lottery (Auto or Manual): ",
+        "Insert a bet mode (Simple or Multiple): ",
         "Insert a amount of bet: ",
-        "Insert an input game mode lottery (Auto or Manual): ",
         "\nDo you want close program (Yes or No)?\n",
     ],
 }
