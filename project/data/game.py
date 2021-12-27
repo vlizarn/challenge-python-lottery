@@ -4,7 +4,7 @@ class Game(Class.Lottery):
 
     def __init__(
             self,
-            lmode = "Manual",
+            lmode = "Auto",
             lTitle = "Default",
             lTimes = 5,
             lTimesConjunt = 7,
