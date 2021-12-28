@@ -12,7 +12,7 @@ class Lottery(Class.Cover):
 
     def __init_subclass__(
             cls,
-            lmode = "Manual",
+            lmode = "Auto",
             lTitle = "Default",
             lTimes = 5,
             lTimesConjunt = 7,
@@ -44,13 +44,21 @@ class Lottery(Class.Cover):
         else:
             self.print('msg', 'lottery', 0)
 
-    def matrix(self, times, limit):
+    def matrix(self, mode, times, limit):
         storage, group = list(), list()
+
+        def values(mode):
+            if mode == "Auto":
+                return random.randint(1, limit)
+            elif mode == "Manual":
+                return input(f'Element[x][y]=')
+            else:
+                raise ValueError("Not Found!")
 
         for x in range(self.times):
 
             for y in range(times):
-                number = random.randint(1, limit)
+                number = values(mode)
                 storage.append(number)
 
             group.append(storage[0+x*times:times+x*times])
@@ -62,23 +70,25 @@ class Lottery(Class.Cover):
 
         return group
 
-    def generate(self, input):
+    def generate(self):
         self.times = (1, self.times) [self.times > 1]
         
         def rand(data, mode):
             return (data, random.randint(1, data)) [mode == True]
 
-        def annex(data, input, amount = 1):
-            
+        def annex(data, name, amount = 1):
+
             for x in range(amount):
 
                 data.append(
                 [
                     self.matrix(
+                        mode = name,
                         times=rand(self.timesConjunt, self.randConjunt), 
                         limit=self.maxConjunt,
                     )[x],
                     self.matrix(
+                        mode = name,
                         times=rand(self.timesStar, self.randStar), 
                         limit=self.maxStar,
                     )[x],
@@ -91,8 +101,8 @@ class Lottery(Class.Cover):
 
             return data
 
-        annex(self.reward)
-        annex(self.elements, self.times)
+        annex(self.reward, "Auto")
+        annex(self.elements, self.mode, self.times)
    
     def filter(self):
 
@@ -117,7 +127,7 @@ class Lottery(Class.Cover):
                 self.printStr('2', [result])
 
     def build(self):
-        self.generate(input = 0)
+        self.generate()
         self.filter()
 
     def match(self):
