@@ -47,18 +47,18 @@ class Lottery(Class.Cover):
     def matrix(self, mode, times, limit):
         storage, group = list(), list()
 
-        def values(mode):
+        def values(mode, x, y):
             if mode == "Auto":
                 return random.randint(1, limit)
             elif mode == "Manual":
-                return input(f'Element[x][y]=')
+                return input(f'Element[{x}][{y}]=')
             else:
                 raise ValueError("Not Found!")
 
         for x in range(self.times):
 
             for y in range(times):
-                number = values(mode)
+                number = values(mode, x, y)
                 storage.append(number)
 
             group.append(storage[0+x*times:times+x*times])
@@ -138,6 +138,7 @@ class Lottery(Class.Cover):
             if self.elements[x] == self.reward[0] and self.won == True:
                 message = True
             else:
+
                 pass
 
         return [message, self.reward[0]]
