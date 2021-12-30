@@ -44,22 +44,30 @@ class Lottery(Class.Cover):
         else:
             self.print('msg', 'lottery', 0)
 
-    def matrix(self, mode, times, limit):
+    def matrix(self, mode, times, limit, timesElement, randElement):
         storage, group = list(), list()
 
         def values(mode, x, y):
             if mode == "Auto":
                 return random.randint(1, limit)
             elif mode == "Manual":
-                return input(f'Element[{x}][{y}]=')
+                return int(input(f'Element[{x}][{y}]='))
             else:
                 raise ValueError("Not Found!")
+
+        def rand(data, mode):
+            return (data, random.randint(1, data)) [mode == True]
 
         for x in range(self.times):
 
             for y in range(times):
                 number = values(mode, x, y)
-                storage.append(number)
+
+                if number <= limit and number > 0:
+                    storage.append(number)
+                else:
+                    storage.append(rand(self.timesConjunt, self.randConjunt))
+                    print("Error Detected!")
 
             group.append(storage[0+x*times:times+x*times])
 
@@ -77,27 +85,34 @@ class Lottery(Class.Cover):
             return (data, random.randint(1, data)) [mode == True]
 
         def annex(data, name, amount = 1):
+            storage = list()
 
-            for x in range(amount):
+            storage.append(
+            [
+                self.matrix(
+                    mode = name,
+                    times = rand(self.timesConjunt, self.randConjunt), 
+                    limit = self.maxConjunt,
+                    timesElement = self.timesConjunt,
+                    randElement = self.randConjunt,
+                ),
+                self.matrix(
+                    mode = name,
+                    times = rand(self.timesStar, self.randStar), 
+                    limit = self.maxStar,
+                    timesElement = self.timesStar,
+                    randElement = self.randStar,
+                )
+            ])
+                
+            for x in range(self.times):
+                data.append([storage[0][0][x], storage[0][1][x]])
 
-                data.append(
-                [
-                    self.matrix(
-                        mode = name,
-                        times=rand(self.timesConjunt, self.randConjunt), 
-                        limit=self.maxConjunt,
-                    )[x],
-                    self.matrix(
-                        mode = name,
-                        times=rand(self.timesStar, self.randStar), 
-                        limit=self.maxStar,
-                    )[x],
-                ])
-
-                if len(data) > amount:
-                    data.pop(0)
-                else:
-                    pass
+            if len(data) > amount:
+                storage.pop(0)
+                data.pop(0)
+            else:
+                pass
 
             return data
 
@@ -138,7 +153,6 @@ class Lottery(Class.Cover):
             if self.elements[x] == self.reward[0] and self.won == True:
                 message = True
             else:
-
                 pass
 
         return [message, self.reward[0]]
