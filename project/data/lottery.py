@@ -67,7 +67,6 @@ class Lottery(Class.Cover):
                     storage.append(number)
                 else:
                     storage.append(rand(self.timesConjunt, self.randConjunt))
-                    print("Error Detected!")
 
             group.append(storage[0+x*times:times+x*times])
 
