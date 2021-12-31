@@ -42,7 +42,7 @@ class Lottery(Class.Cover):
             self.build()
             self.footer()
         else:
-            self.print('msg', 'lottery', 0)
+            self.print('msg', 'lottery', 2)
 
     def matrix(self, mode, times, limit, timesElement, randElement):
         storage, group = list(), list()
@@ -161,7 +161,7 @@ class Lottery(Class.Cover):
  
     def footer(self):
         self.printList('1', [self.match()[1]])
-
+        
         if self.match()[0] == True:
             self.print('msg', 'lottery', 0)
         else:
