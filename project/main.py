@@ -35,10 +35,9 @@ class Program(Class.Game):
 
                 if name == "Simple":
                     Class.Game(
-                        mode,name,
+                        mode, name,
                         int(amount), 5, 2
                     ).bet()
-
                 elif  name == "Multiple":
                     Class.Game(
                         mode, name,
@@ -47,7 +46,7 @@ class Program(Class.Game):
                         lRandStar=True
                     ).bet()
                 else:
-                     self.print('msg', 'error', 1)
+                     pass
             except:
                 self.error()
 
