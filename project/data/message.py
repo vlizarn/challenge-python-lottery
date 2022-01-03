@@ -18,12 +18,12 @@ reportDict = {
     "lottery": [
         "You won the lottery!",
         "You don't win the lottery!",
-        "Not Found the input game mode!",
+        "Not Found the input game mode!"
         "The number of bets is fewer than permitted!",
     ],
     "error": [
         "\nUnexpected error: ",
-        "Error detect, Try another option!",
+        "Not Found the name bet type!",
     ],
     "request": [
         "\nInsert an input game mode lottery (Auto or Manual): ",
