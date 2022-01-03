@@ -30,17 +30,17 @@ class Program(Class.Game):
 
             try:
                 mode = input(self.message.reportDict['request'][0])
-                name = input(self.message.reportDict['request'][1])
+                title = input(self.message.reportDict['request'][1])
                 amount = input(self.message.reportDict['request'][2])
 
-                if name == "Simple":
+                if title == "Simple":
                     Class.Game(
-                        mode, name,
+                        mode, title,
                         int(amount), 5, 2
                     ).bet()
-                elif  name == "Multiple":
+                elif  title == "Multiple":
                     Class.Game(
-                        mode, name,
+                        mode, title,
                         int(amount), 11, 5,
                         lRandConjunt=True,
                         lRandStar=True
