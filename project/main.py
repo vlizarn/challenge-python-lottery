@@ -29,27 +29,26 @@ class Program(Class.Game):
         while self.state == 1:
 
             try:
-                mode = input(self.message.reportDict['request'][0])
                 title = input(self.message.reportDict['request'][1])
+                mode = input(self.message.reportDict['request'][0])
                 amount = input(self.message.reportDict['request'][2])
 
                 if title == "Simple":
                     Class.Game(
                         mode, title,
-                        int(amount), 5, 2
+                        amount, 5, 2
                     ).bet()
                 elif  title == "Multiple":
                     Class.Game(
                         mode, title,
-                        int(amount), 11, 5,
+                        amount, 11, 5,
                         lRandConjunt=True,
                         lRandStar=True
                     ).bet()
                 else:
-                     pass
+                     self.print('msg', 'lottery', 2)
             except:
                 self.error()
-
             finally:
                 self.confirme()
 
