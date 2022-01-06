@@ -37,38 +37,56 @@ class Lottery(Class.Cover):
         self.reward.clear()
   
     def bet(self):
-        if self.times > 0:
-            self.header()
-            self.build()
-            self.footer()
-        else:
-            self.print('msg', 'lottery', 2)
+        if self.mode == "Auto" or self.mode == "Manual":
+   
+            try:
+                if int(self.times) > 0:
+                    self.header()
+                    self.build()
+                    self.footer()
+                else:
+                    self.print('msg', 'lottery', 4)
 
-    def matrix(self, mode, times, limit, timesElement, randElement):
+            except ValueError:
+                    self.print('msg', 'error', 1)
+        else:
+            self.print('msg', 'lottery', 3)
+
+    def matrix(self, mode, limit, timeslimit, randBool):
         storage, group = list(), list()
 
-        def values(mode, x, y):
+        def rand(data, mode):
+            return (data, random.randint(1, data)) [mode == True]
+
+        def detect(mode, x, y):
             if mode == "Auto":
                 return random.randint(1, limit)
             elif mode == "Manual":
                 return int(input(f'Element[{x}][{y}]='))
             else:
-                raise ValueError("Not Found!")
+                pass
 
-        def rand(data, mode):
-            return (data, random.randint(1, data)) [mode == True]
+        element = rand(timeslimit, randBool)
 
         for x in range(self.times):
 
-            for y in range(times):
-                number = values(mode, x, y)
+            for y in range(element):
+                randTime = detect("Auto", x, y)
 
-                if number <= limit and number > 0:
-                    storage.append(number)
-                else:
-                    storage.append(rand(self.timesConjunt, self.randConjunt))
+                try:
+                    number = detect(mode, x, y)
+                    
+                    if number <= limit and number > 0:
+                        storage.append(number)
+                    else:
+                        storage.append(randTime)
+                        self.print('msg', 'error', 2)
 
-            group.append(storage[0+x*times:times+x*times])
+                except ValueError:
+                    storage.append(randTime)
+                    self.print('msg', 'error', 2)
+
+            group.append(storage[x*element:element+x*element])
 
             if len(group) <= self.times:
                 pass
@@ -78,10 +96,7 @@ class Lottery(Class.Cover):
         return group
 
     def generate(self):
-        self.times = (1, self.times) [self.times > 1]
-        
-        def rand(data, mode):
-            return (data, random.randint(1, data)) [mode == True]
+        self.times = (1, int(self.times)) [int(self.times) > 1]
 
         def annex(data, name, amount = 1):
             storage = list()
@@ -90,17 +105,15 @@ class Lottery(Class.Cover):
             [
                 self.matrix(
                     mode = name,
-                    times = rand(self.timesConjunt, self.randConjunt), 
                     limit = self.maxConjunt,
-                    timesElement = self.timesConjunt,
-                    randElement = self.randConjunt,
+                    timeslimit = self.timesConjunt,
+                    randBool = self.randConjunt,
                 ),
                 self.matrix(
                     mode = name,
-                    times = rand(self.timesStar, self.randStar), 
                     limit = self.maxStar,
-                    timesElement = self.timesStar,
-                    randElement = self.randStar,
+                    timeslimit = self.timesStar,
+                    randBool = self.randStar,
                 )
             ])
                 
@@ -117,6 +130,11 @@ class Lottery(Class.Cover):
 
         annex(self.reward, "Auto")
         annex(self.elements, self.mode, self.times)
+
+        if self.mode == "Manual":
+            self.print('null', 'null', 0)
+        else:
+            pass
    
     def filter(self):
 
@@ -161,7 +179,7 @@ class Lottery(Class.Cover):
  
     def footer(self):
         self.printList('1', [self.match()[1]])
-        
+
         if self.match()[0] == True:
             self.print('msg', 'lottery', 0)
         else:
