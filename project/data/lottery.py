@@ -66,8 +66,14 @@ class Lottery(Class.Cover):
             else:
                 pass
 
+        element = rand(timeslimit, randBool)
+
         for x in range(self.times):
-            element = rand(timeslimit, randBool)
+
+            if mode == Auto:
+                element = rand(timeslimit, randBool)
+            else:
+                pass
 
             for y in range(element+1):
                 randTime = detect("Auto", x, y)
