@@ -53,42 +53,40 @@ class Lottery(Class.Cover):
             self.print('msg', 'lottery', 3)
 
     def matrix(self, mode, limit, timeslimit, randBool):
-        storage, group = list(), list()
+        storage, group, value = list(), list(), int
 
         def rand(data, mode):
             return (data, random.randint(1, data)) [mode == True]
 
-        def detect(mode, x, y):
-            if mode == "Auto":
-                return random.randint(1, limit)
-            elif mode == "Manual":
-                return int(input(f'Element[{x}][{y}]='))
-            else:
-                pass
-
-        element = rand(timeslimit, randBool)
+        def manual(x, y):
+            return int(input(f'Element[{x}][{y}]='))
 
         for x in range(self.times):
+            element = rand(timeslimit, randBool)
 
-            if mode == Auto:
-                element = rand(timeslimit, randBool)
+            if randBool == True:
+                value = self.times - 1
             else:
-                pass
+                value = 0
 
-            for y in range(element+1):
-                randTime = detect("Auto", x, y)
+            for y in range(element+value):
+                autoValues = random.randint(1, limit)
 
                 try:
-                    number = detect(mode, x, y)
-                    
-                    if number <= limit and number > 0:
-                        storage.append(number)
-                    else:
-                        storage.append(randTime)
-                        self.print('msg', 'error', 2)
+                    if mode == "Auto":
+                        storage.append(autoValues)
+
+                    if mode == "Manual":
+                        manualValues = manual(x, y)
+
+                        if manualValues > 0 and manualValues <= limit:
+                            storage.append(manualValues)
+                        else:
+                            storage.append(autoValues)
+                            self.print('msg', 'error', 2)
 
                 except ValueError:
-                    storage.append(randTime)
+                    storage.append(autoValues)
                     self.print('msg', 'error', 2)
 
             group.append(storage[x*element:element+x*element])
