@@ -4,6 +4,7 @@ class Game(Class.Lottery):
 
     def __init__(
             self,
+            lmode = "Auto",
             lTitle = "Default",
             lTimes = 5,
             lTimesConjunt = 7,
@@ -14,6 +15,7 @@ class Game(Class.Lottery):
             lRandStar = False
         ):
         super().__init_subclass__(
+            lmode,
             lTitle,
             lTimes,
             lTimesConjunt,

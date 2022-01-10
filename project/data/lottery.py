@@ -12,6 +12,7 @@ class Lottery(Class.Cover):
 
     def __init_subclass__(
             cls,
+            lmode = "Auto",
             lTitle = "Default",
             lTimes = 5,
             lTimesConjunt = 7,
@@ -21,6 +22,7 @@ class Lottery(Class.Cover):
             lRandConjunt = False,
             lRandStar = False
         ):
+            cls.mode = lmode
             cls.title = lTitle
             cls.times = lTimes
             cls.timesConjunt = lTimesConjunt
@@ -35,23 +37,59 @@ class Lottery(Class.Cover):
         self.reward.clear()
   
     def bet(self):
-        if self.times > 0:
-            self.header()
-            self.build()
-            self.footer()
-        else:
-            self.print('msg', 'lottery', 0)
+        if self.mode == "Auto" or self.mode == "Manual":
+   
+            try:
+                if int(self.times) > 0:
+                    self.header()
+                    self.build()
+                    self.footer()
+                else:
+                    self.print('msg', 'lottery', 4)
 
-    def matrix(self, times, limit):
-        storage, group = list(), list()
+            except ValueError:
+                    self.print('msg', 'error', 1)
+        else:
+            self.print('msg', 'lottery', 3)
+
+    def matrix(self, mode, limit, timeslimit, randBool):
+        storage, group, value = list(), list(), int
+
+        def rand(data, mode):
+            return (data, random.randint(1, data)) [mode == True]
+
+        def manual(x, y):
+            return int(input(f'Element[{x}][{y}]='))
 
         for x in range(self.times):
+            element = rand(timeslimit, randBool)
 
-            for y in range(times):
-                number = random.randint(1, limit)
-                storage.append(number)
+            if randBool == True:
+                value = self.times - 1
+            else:
+                value = 0
 
-            group.append(storage[0+x*times:times+x*times])
+            for y in range(element+value):
+                autoValues = random.randint(1, limit)
+
+                try:
+                    if mode == "Auto":
+                        storage.append(autoValues)
+
+                    if mode == "Manual":
+                        manualValues = manual(x, y)
+
+                        if manualValues > 0 and manualValues <= limit:
+                            storage.append(manualValues)
+                        else:
+                            storage.append(autoValues)
+                            self.print('msg', 'error', 2)
+
+                except ValueError:
+                    storage.append(autoValues)
+                    self.print('msg', 'error', 2)
+
+            group.append(storage[x*element:element+x*element])
 
             if len(group) <= self.times:
                 pass
@@ -61,36 +99,45 @@ class Lottery(Class.Cover):
         return group
 
     def generate(self):
-        self.times = (1, self.times) [self.times > 1]
-        
-        def rand(data, mode):
-            return (data, random.randint(1, data)) [mode == True]
+        self.times = (1, int(self.times)) [int(self.times) > 1]
 
-        def annex(data, amount = 1):
-            
-            for x in range(amount):
+        def annex(data, name, amount = 1):
+            storage = list()
 
-                data.append(
-                [
-                    self.matrix(
-                        times=rand(self.timesConjunt, self.randConjunt), 
-                        limit=self.maxConjunt,
-                    )[x],
-                    self.matrix(
-                        times=rand(self.timesStar, self.randStar), 
-                        limit=self.maxStar,
-                    )[x],
-                ])
+            storage.append(
+            [
+                self.matrix(
+                    mode = name,
+                    limit = self.maxConjunt,
+                    timeslimit = self.timesConjunt,
+                    randBool = self.randConjunt,
+                ),
+                self.matrix(
+                    mode = name,
+                    limit = self.maxStar,
+                    timeslimit = self.timesStar,
+                    randBool = self.randStar,
+                )
+            ])
+                
+            for x in range(self.times):
+                data.append([storage[0][0][x], storage[0][1][x]])
 
-                if len(data) > amount:
-                    data.pop(0)
-                else:
-                    pass
+            if len(data) > amount:
+                storage.pop(0)
+                data.pop(0)
+            else:
+                pass
 
             return data
 
-        annex(self.reward)
-        annex(self.elements, self.times)
+        annex(self.reward, "Auto")
+        annex(self.elements, self.mode, self.times)
+
+        if self.mode == "Manual":
+            self.print('null', 'null', 0)
+        else:
+            pass
    
     def filter(self):
 
