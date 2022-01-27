@@ -60,7 +60,7 @@ py main.py
 * Creation of the `Simple` and `Multiple` bet modes.
 * Ability to choose between `Auto` or `Manual` input game mode lottery.
 * Player can insert a number of times for every bet.
-* The code permits creating a new bet modes and modifying the current ones.
+* The code can be reused to create new bet modes and modify the current ones.
 
 ## Contributor
 * [ **vlizarn** ](https://github.com/vlizarn)
