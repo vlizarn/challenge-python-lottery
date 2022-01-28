@@ -34,7 +34,25 @@ All essential information about the project, you can be found here.
 
 ### Setup
 
-To install it locally in your machine, you can use git.
+To install it locally in your machine follow the corrent instructions.
+
+#### For Windows, Linux and MacOS
+
+Create project directory.
+
+```batch
+mkdir project
+```
+
+Set path of the current directory.
+
+```batch
+cd project
+```
+
+#### Use Git Command
+
+Clone the repository into a project directory.
 
 ```
 git clone https://github.com/vlizarn/challenge-python-lottery.git
