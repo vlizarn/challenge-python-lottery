@@ -66,7 +66,7 @@ cd challenge-python-lottery\project
 
 ##### 5. To run the project using the command line, terminal, or use [IDE](https://www.freecodecamp.org/news/what-is-an-ide-in-programming-an-ide-definition-for-developers).
 
-```python
+```
 py main.py
 ```
 
