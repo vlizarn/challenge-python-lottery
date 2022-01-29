@@ -32,36 +32,41 @@ All essential information about the project, you can be found here.
 
 ## Getting Started
 
-### Setup
+### Installation
 
-To install it locally in your machine follow the corrent instructions.
+To install it locally in your machine the application.
 
 #### For Windows, Linux and MacOS
 
-Create project directory.
+Open the command line or terminal and follow all instructions.
 
-```batch
-mkdir project
+##### 1. Create project directory.
+
+```
+mkdir app
 ```
 
-Set path of the current directory.
+##### 2. Set path of the current directory.
 
-```batch
-cd project
+```
+cd app
 ```
 
-#### Use Git Command
-
-Clone the repository into a project directory.
+##### 3. Clone the repository into a project directory.
 
 ```
 git clone https://github.com/vlizarn/challenge-python-lottery.git
 ```
 
-### Usage
-To run the project using Visual Studio 2019 or the command line.
+##### 4. Go to the current directory.
 
 ```
+cd challenge-python-lottery\project
+```
+
+##### 5. To run the project using the command line, terminal, or use [IDE](https://www.freecodecamp.org/news/what-is-an-ide-in-programming-an-ide-definition-for-developers).
+
+```python
 py main.py
 ```
 
