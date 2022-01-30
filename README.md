@@ -6,7 +6,7 @@
 [![issues-pr](https://img.shields.io/github/issues-pr/vlizarn/challenge-python-lottery)](https://github.com/vlizarn/challenge-python-lottery/pulls)
 [![milestones](https://img.shields.io/github/milestones/open/vlizarn/challenge-python-lottery)](https://github.com/vlizarn/challenge-python-lottery/milestones)
 
-The project consists to create a lottery game, using the Object-oriented python programming language that permits user choose the bet mode, input game mode and number of times for every bet. Also, permits creating a new bet modes and modifying the current ones.
+The lottery game project consists of creating the lottery game using the object-oriented python programming language that permits users to choose the bet mode, input game mode, and the number of times for every bet. Also, it's possible creating a new bet mode and modify the current ones.
 
 **Several Options**
 
@@ -19,6 +19,7 @@ Amount of Bet: Equal or up of the `1`.
 ## General Information
 
 ### Table of Content
+
 All essential information about the project, you can be found here.
 
 | Project    | Community |
@@ -35,17 +36,17 @@ All essential information about the project, you can be found here.
 
 To install it locally in your machine the application.
 
-#### For Windows, Linux and MacOS
+#### For Windows, Linux, and macOS
 
 Open the command line or terminal and follow all instructions.
 
-##### 1. Create project directory.
+##### 1. Create a project directory.
 
 ```
 mkdir app
 ```
 
-##### 2. Set path of the current directory.
+##### 2. Set the path of the current directory.
 
 ```
 cd app
@@ -163,7 +164,7 @@ Remember, it's essential to remove or reuse the current code of the application.
 ## Features 
 * Creation of the `Simple` and `Multiple` bet modes.
 * Ability to choose between `Auto` or `Manual` input game mode lottery.
-* Player can insert a number of times for every bet.
+* Player can insert the number of times for every bet.
 * The code can be reused to create new bet modes and modify the current ones.
 
 ## Contributor
