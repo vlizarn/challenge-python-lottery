@@ -98,9 +98,9 @@ The current code has three variables, and every variable contains an input metho
        self.print('msg', 'lottery', 2)
 ```
 
-In the first condition, you can see the `title` variable match with the `"Simple"` string, if the `if` statement match is equal, the `Game` constructor with the bet method will be executed inside the code of block on the `if` statement. The `Game` constructor inside the `if` has five arguments, and the `elif` statement contains seven arguments on the constructor. Every parameter is changeable and permits reuse the arguments to create a new bet mode for the lottery game. For the least, if all top statements don't match the code, the program will return a message with an error explanation.
+In the first condition, you can see the `title` variable match with the `"Simple"` string, if the `if` statement match is equal, the `Game` constructor with the bet method will be executed inside the code of block on the `if` statement. The `Game` constructor inside the `if` has five arguments, and the `elif` statement contains seven arguments on the constructor. Every parameter is changeable and permits the reuse of the arguments to create a new bet mode for the lottery game. For the least, if all top statements don't match the code, the program will return a message with an error explanation.
 
-#### Exemple 2 - Game constructor  
+#### Exemple 2 - Game constructor
 
 The `Game` constructor needs arguments for all parameters to perform correctly. In this case, the `Game` constructor is responsible for the data request provided for the `Lottery` class. These two constructors have default parameters that mustn't require arguments to the parameters.
 
