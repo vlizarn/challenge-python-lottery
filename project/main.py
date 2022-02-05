@@ -11,7 +11,7 @@ class Program(Class.Game):
         super().__del__()
         self.print('msg', 'program', 0)
 
-    def confirme(self):
+    def confirm(self):
         step = input(self.message.reportDict['request'][3])
         
         clear = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
@@ -22,7 +22,7 @@ class Program(Class.Game):
             clear()
         else:
             self.print('msg', 'program', 1)
-            self.confirme()
+            self.confirm()
 
     def run(self):
 
@@ -38,7 +38,7 @@ class Program(Class.Game):
                         mode, title,
                         amount, 5, 2
                     ).bet()
-                elif  title == "Multiple":
+                elif title == "Multiple":
                     Class.Game(
                         mode, title,
                         amount, 11, 5,
@@ -50,7 +50,7 @@ class Program(Class.Game):
             except:
                 self.error()
             finally:
-                self.confirme()
+                self.confirm()
 
 def main():
     app = Program()
