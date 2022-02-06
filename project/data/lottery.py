@@ -37,6 +37,7 @@ class Lottery(Class.Cover):
         self.reward.clear()
   
     def bet(self):
+
         if self.mode == "Auto" or self.mode == "Manual":
    
             try:
