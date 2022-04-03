@@ -16,9 +16,9 @@ class Program(Class.Game):
         
         clear = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
 
-        if(step == "Yes"):
+        if step == "Yes":
             self.state = 0
-        elif(step == "No"):
+        elif step == "No":
             clear()
         else:
             self.print('msg', 'program', 1)

@@ -143,7 +143,7 @@ class Lottery(Class.Cover):
     def filter(self):
 
         for x in range(self.times):
-            if (self.elements.count(self.elements[x])) <= 1:
+            if self.elements.count(self.elements[x]) <= 1:
                 self.count += self.elements.count(self.elements[x])
             else:
                 pass
