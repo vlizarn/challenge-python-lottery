@@ -1,8 +1,8 @@
 import os
 
-import data.game as Class
+import data.game as Extend
 
-class Program(Class.Game):
+class Program(Extend.Game):
 
     def __init__(
             self,
