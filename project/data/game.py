@@ -1,6 +1,6 @@
-import data.lottery as Class
+import data.lottery as Extend
 
-class Game(Class.Lottery):
+class Game(Extend.Lottery):
 
     def __init__(
             self,
