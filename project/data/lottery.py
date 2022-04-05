@@ -1,10 +1,10 @@
 import random
 
-import data.cover as Class
+import data.cover as Extend
 
-class Lottery(Class.Cover):
+class Lottery(Extend.Cover):
 
-    message = Class.message
+    message = Extend.message
     elements = list()
     reward = list()
     won = True
