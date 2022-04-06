@@ -1,10 +1,32 @@
 import os
 
-import data.game as Class
+import data.game as Extend
 
-class Program(Class.Game):
+class Program(Extend.Game):
 
-    def __init__(self):
+    def __init__(
+            self,
+            lmode = "Auto",
+            lTitle = "Default",
+            lTimes = 5,
+            lTimesConjunt = 7,
+            lTimesStar = 3,
+            lMaxConjunt = 50,
+            lMaxStar = 9,
+            lRandConjunt = False,
+            lRandStar = False
+        ):
+        super().__init_subclass__(
+            lmode,
+            lTitle,
+            lTimes,
+            lTimesConjunt,
+            lTimesStar,
+            lMaxConjunt,
+            lMaxStar,
+            lRandConjunt,
+            lRandStar
+        )
         self.state = 1
 
     def __del__(self) -> None:
@@ -34,12 +56,12 @@ class Program(Class.Game):
                 amount = input(self.message.reportDict['request'][2])
 
                 if title == "Simple":
-                    Class.Game(
+                    Program(
                         mode, title,
                         amount, 5, 2
                     ).bet()
                 elif title == "Multiple":
-                    Class.Game(
+                    Program(
                         mode, title,
                         amount, 11, 5,
                         lRandConjunt=True,
