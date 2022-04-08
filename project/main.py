@@ -31,7 +31,6 @@ class Program(Extend.Game):
 
     def __del__(self) -> None:
         super().__del__()
-        self.print('msg', 'program', 0)
 
     def confirm(self):
         step = input(self.message.reportDict['request'][3])
@@ -40,10 +39,10 @@ class Program(Extend.Game):
 
         if step == "Yes":
             self.state = 0
+            self.print('msg', 'program', 0)
         elif step == "No":
             clear()
         else:
-            self.print('msg', 'program', 1)
             self.confirm()
 
     def run(self):
