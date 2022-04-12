@@ -167,5 +167,5 @@ Remember, it's essential to remove or reuse the current code of the application.
 * Player can insert the number of times for every bet.
 * The code can be reused to create new bet modes and modify the current ones.
 
-## Contributor
+## Contributors
 * [ **vlizarn** ](https://github.com/vlizarn)
