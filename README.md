@@ -79,24 +79,24 @@ This section contains several examples with descriptions explaining the function
 The current code has three variables, and every variable contains an input method with a message inside it. The first variable is the `title` and permits inserting a `title` name for your new bet mode. The `mode` variable only accepts an insert game input mode that should only include an `Auto` or `Manual` mode. The last variable is `amount` and corresponds to writing the number of bets equal or higher than one and not equal or less than zero to execute the code correctly. The program will return a message with an error explanation in the case of error detect.
 
 ```python
-  title = input(self.message.reportDict['request'][1])
-  mode = input(self.message.reportDict['request'][0])
-  amount = input(self.message.reportDict['request'][2])
+title = input(self.message.reportDict['request'][1])
+mode = input(self.message.reportDict['request'][0])
+amount = input(self.message.reportDict['request'][2])
 
-  if title == "Simple":
-      Class.Game(
-          mode, title,
-          amount, 5, 2
-      ).bet()
-  elif title == "Multiple":
-      Class.Game(
-          mode, title,
-          amount, 11, 5,
-          lRandConjunt=True,
-          lRandStar=True
-      ).bet()
-  else:
-       self.print('msg', 'lottery', 2)
+if title == "Simple":
+    Program(
+        mode, title,
+        amount, 5, 2
+    ).bet()
+elif title == "Multiple":
+    Program(
+        mode, title,
+        amount, 11, 5,
+        lRandConjunt=True,
+        lRandStar=True
+    ).bet()
+else:
+     self.print('msg', 'lottery', 2)
 ```
 
 In the first condition, you can see the `title` variable match with the `"Simple"` string, if the `if` statement match is equal, the `Game` constructor with the bet method will be executed inside the block of code on the `if` statement. The `Game` constructor inside the `if` has five arguments, and the `elif` statement contains seven arguments on the constructor. Every parameter is changeable and permits the reuse of the arguments to create a new bet mode for the lottery game. For the least, if all top statements don't match the code, the program will return a message with an error explanation.
