@@ -130,7 +130,7 @@ The current code example uses `lmode` and `lTimes` parameters to set arguments s
 
 ```python
 
-app = Class
+app = Extend
 
 app.Game(
     "Auto",
