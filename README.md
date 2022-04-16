@@ -142,7 +142,7 @@ The current code executed in the compiler will get length random values for the 
 
 ```python
 
-app = Class
+app = Extend
 
 app.Game(
     lRandConjunt = True,
