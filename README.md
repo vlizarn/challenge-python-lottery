@@ -107,7 +107,7 @@ The `Game` constructor needs arguments for all parameters to perform correctly. 
 
 ```python
 
-app = Class
+app = Extend
 
 app.Game(
     lmode = "Auto", 
