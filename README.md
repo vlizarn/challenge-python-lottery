@@ -24,7 +24,7 @@ All essential information about the project, you can be found here.
 
 | Project    | Community |
 |    :----   |    :----   |
-| [Getting Started](#getting-started) | [Code of conduct](https://github.com/vlizarn/challenge-python-lottery/blob/master/CODE_OF_CONDUCT.md) |
+| [Getting Started](#getting-started) | [Code of Conduct](https://github.com/vlizarn/challenge-python-lottery/blob/master/CODE_OF_CONDUCT.md) |
 | [Screenshots](#screenshots) | [Contributing](https://github.com/vlizarn/challenge-python-lottery/blob/master/CONTRIBUTING.md)|
 | [Technologies](#technologies) | [Licence](https://github.com/vlizarn/challenge-python-lottery/blob/master/LICENSE) |
 | [Features](#features) |[Security Policy](https://github.com/vlizarn/challenge-python-lottery/blob/master/SECURITY.md) |
