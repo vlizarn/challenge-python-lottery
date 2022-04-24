@@ -28,7 +28,7 @@ All essential information about the project, you can be found here.
 | [Screenshots](#screenshots) | [Contributing](https://github.com/vlizarn/challenge-python-lottery/blob/master/CONTRIBUTING.md)|
 | [Technologies](#technologies) | [License](https://github.com/vlizarn/challenge-python-lottery/blob/master/LICENSE) |
 | [Features](#features) |[Security Policy](https://github.com/vlizarn/challenge-python-lottery/blob/master/SECURITY.md) |
-| [Contributor](#contributor) |[Discussions](https://github.com/vlizarn/challenge-python-lottery/discussions) |
+| [Contributors](#contributor) |[Discussions](https://github.com/vlizarn/challenge-python-lottery/discussions) |
 
 ## Getting Started
 
