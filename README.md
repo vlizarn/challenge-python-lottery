@@ -123,7 +123,7 @@ app.Game(
 
 ```
 
-The `lTimes` is responsible for the number of bets, `lTimesConjunt` and `lTimesStar` set for the length of every conjunct of elements. The `lMaxConjunt` and `lMaxStar` are the values that start at one to the maximum values for every conjunct. Finally, `lRandConjunt` and `lRandStar` are two boolean data types that match the process of random to `lTimesConjunt` and `lTimesStar`.
+The `lTimes` is responsible for the number of bets, `lTimesConjunt` and `lTimesStar` set for the length of every conjunct of elements. The `lMaxConjunt` and `lMaxStar` are the values that start at one to the maximum values for every conjunct. Finally, `lRandConjunt` and `lRandStar` parameters are two boolean data types that match the process of random to `lTimesConjunt` and `lTimesStar` parameters.
 
 #### Example 3 - Code Abridgment
 
