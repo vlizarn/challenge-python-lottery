@@ -127,7 +127,7 @@ The `lTimes` is responsible for the number of bets, `lTimesConjunt` and `lTimesS
 
 #### Example 3 - Code Abridgment
 
-The current code example uses `lmode` and `lTimes` parameters to set arguments such as `Auto` that includes the bet mode choices and the value `10` that match the number of bets. The code can be constituted for the represented the current example in the line of code of the `run` method on the `Program` class, remember set inside of the while loop, the code. When running the current code in the compiler, will get ten bets using the `Auto` game input mode and the default arguments of the constructor.
+The current code example uses `lmode` and `lTimes` parameters to set arguments such as `Auto` which includes the bet mode choices and the value `10` that match the number of bets. The code can be constituted the represented the current example in the line of code of the `run` method on the `Program` class, remember set inside of the while loop, the code. When running the current code in the compiler, will get ten bets using the `Auto` game input mode and the default arguments of the constructor.
 
 ```python
 
