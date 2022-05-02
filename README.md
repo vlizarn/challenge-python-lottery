@@ -139,7 +139,8 @@ app.Game(
 ).bet()
 
 ```
-The current code executed in the compiler will get length random values for the `lTimesConjunt` and not for the `lTimesStar`.
+
+The current code executed in the compiler will get the length of the random values for the `lTimesConjunt` and not for the `lTimesStar` parameter.
 
 ```python
 
