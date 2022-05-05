@@ -76,7 +76,7 @@ This section contains several examples with descriptions explaining the function
 
 #### Example 1 - Main Description
 
-The current code has three variables, and every variable contains an input method with a message inside it. The first variable is the `title` and permits inserting a `title` name for your new bet mode. The `mode` variable only accepts an insert game input mode that should only include an `Auto` or `Manual` mode. The last variable is `amount` and corresponds to writing the number of bets equal or higher than one and not equal or less than zero to execute the code correctly. The program will return a message with an error explanation in the case of error detection.
+The current code has three variables, and every variable contains an input method with a message inside it. The first variable is the `title` and permits inserting a `title` name for your new bet mode. The `mode` variable only accepts an insert game input mode that should only include an `Auto` or `Manual` mode. The last variable is `amount` and corresponds to writing the number of bets equal or higher than one and not equal or less than zero to execute the code correctly.
 
 ```python
 title = input(self.message.reportDict['request'][1])
