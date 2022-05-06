@@ -72,7 +72,7 @@ py main.py
 
 ### Code Sample
 
-This section contains several examples with descriptions explaining the functionalities and the constitutions of the code and the creation process of the bet mode.
+This section contains examples of the descriptions of functionalities and constitutions of the application code.
 
 #### Example 1 - Main Description
 
