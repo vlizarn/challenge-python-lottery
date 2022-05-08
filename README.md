@@ -14,7 +14,7 @@ Bet Modes: `Simple` or `Multiple`.
 
 Input Game Modes: `Auto` or `Manual`.
 
-Amount of Bet: Equal or up to the `1`;
+Amount of Bet: Equal or up to the `1`.
 
 ## General Information
 
@@ -161,6 +161,7 @@ Remember, it's essential to remove or reuse the current code of the application.
 
 ## Technologies
 * Programming Languages: `Python`.
+* 
 * Libraries: `os`, `sys` and `random`.
 
 ## Features 
