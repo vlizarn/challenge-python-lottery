@@ -14,7 +14,7 @@ Bet Modes: `Simple` or `Multiple`.
 
 Input Game Modes: `Auto` or `Manual`.
 
-Amount of Bet: Equal or up of the `1`.
+Amount of Bet: Equal or up to the `1`.
 
 ## General Information
 
@@ -24,11 +24,11 @@ All essential information about the project, you can be found here.
 
 | Project    | Community |
 |    :----   |    :----   |
-| [Getting Started](#getting-started) | [Code of conduct](https://github.com/vlizarn/challenge-python-lottery/blob/master/CODE_OF_CONDUCT.md) |
+| [Getting Started](#getting-started) | [Code of Conduct](https://github.com/vlizarn/challenge-python-lottery/blob/master/CODE_OF_CONDUCT.md) |
 | [Screenshots](#screenshots) | [Contributing](https://github.com/vlizarn/challenge-python-lottery/blob/master/CONTRIBUTING.md)|
-| [Technologies](#technologies) | [Licence](https://github.com/vlizarn/challenge-python-lottery/blob/master/LICENSE) |
+| [Technologies](#technologies) | [License](https://github.com/vlizarn/challenge-python-lottery/blob/master/LICENSE) |
 | [Features](#features) |[Security Policy](https://github.com/vlizarn/challenge-python-lottery/blob/master/SECURITY.md) |
-| [Contributor](#contributor) |[Discussions](https://github.com/vlizarn/challenge-python-lottery/discussions) |
+| [Contributors](#contributor) |[Discussions](https://github.com/vlizarn/challenge-python-lottery/discussions) |
 
 ## Getting Started
 
@@ -72,11 +72,11 @@ py main.py
 
 ### Code Sample
 
-This section contains several examples with descriptions explaining the functionalities and the constitutions of the code and the creation process of the bet mode.
+This section contains examples of the descriptions of functionalities and constitutions of the application code.
 
 #### Example 1 - Main Description
 
-The current code has three variables, and every variable contains an input method with a message inside it. The first variable is the `title` and permits inserting a `title` name for your new bet mode. The `mode` variable only accepts an insert game input mode that should only include an `Auto` or `Manual` mode. The last variable is `amount` and corresponds to writing the number of bets equal or higher than one and not equal or less than zero to execute the code correctly. The program will return a message with an error explanation in the case of error detect.
+The current code has three variables, and every variable contains an input method with a message inside it. The first variable is the `title` and permits inserting a `title` name for your new bet mode. The `mode` variable only accepts an insert game input mode that should only include an `Auto` or `Manual` mode. The last variable is `amount` and corresponds to writing the number of bets equal or higher than one and not equal or less than zero to execute the code correctly.
 
 ```python
 title = input(self.message.reportDict['request'][1])
@@ -99,7 +99,7 @@ else:
      self.print('msg', 'lottery', 2)
 ```
 
-In the first condition, you can see the `title` variable match with the `"Simple"` string, if the `if` statement match is equal, the `Game` constructor with the bet method will be executed inside the block of code on the `if` statement. The `Game` constructor inside the `if` has five arguments, and the `elif` statement contains seven arguments on the constructor. Every parameter is changeable and permits the reuse of the arguments to create a new bet mode for the lottery game. For the least, if all top statements don't match the code, the program will return a message with an error explanation.
+The `title` variable matches the `"Simple"` string. If the `if` statement match is equal, the `Program` constructor with the bet method will be executed inside the `if` statement. The `Program` constructor inside the `if` has five arguments, and the `elif` statement contains seven arguments on the constructor. Every parameter is changeable and permits the reuse of the arguments to create a new bet mode for the lottery game. For the least, if all top statements don't match the code, the program will return a message with an error explanation.
 
 #### Example 2 - Game constructor
 
@@ -122,11 +122,12 @@ app.Game(
 ).bet()
 
 ```
-Also, the `lTimes` is responsible for the number of bets, `lTimesConjunt` and `lTimesStar` are set the length of every conjunct of elements, the `lMaxConjunt` and `lMaxStar` are the values that start at one to the maximum values for every conjunct of elements. Finally, `lRandConjunt` and `lRandStar` are two boolean data types, that match the processes of random to `lTimesConjunt` and `lTimesStar`.
+
+The `lTimes` is responsible for the number of bets, `lTimesConjunt` and `lTimesStar` set for the length of every conjunct of elements. The `lMaxConjunt` and `lMaxStar` are the values that start at one to the maximum values for every conjunct. Finally, `lRandConjunt` and `lRandStar` parameters are two boolean data types that match the process of random to `lTimesConjunt` and `lTimesStar` parameters.
 
 #### Example 3 - Code Abridgment
 
-The current code example uses `lmode` and `lTimes` parameters to set arguments such as `Auto` that includes the bet mode choices and the value `10` that match the number of bets. The code can be constituted for the represented the current example in the line of code of the `run` method on the `Program` class, remember set inside of the while loop, the code. When running the current code in the compiler, will get ten bets using the `Auto` game input mode and the default arguments of the constructor.
+The current code example uses `lmode` and `lTimes` parameters to set arguments such as `Auto` includes the bet mode choices and the value `10` that match the number of bets. The code represented the current example in the `run` method on the `Program` class. Remember to set inside of the while loop the code. When running the code in the compiler will get ten bets using the `Auto` game input mode and the default arguments of the constructor.
 
 ```python
 
@@ -138,7 +139,8 @@ app.Game(
 ).bet()
 
 ```
-The current code executed in the compiler will get length random values for the `lTimesConjunt` and not for the `lTimesStar`.
+
+The current code executed in the compiler will get the length of the random values for the `lTimesConjunt` and not for the `lTimesStar` parameter.
 
 ```python
 
@@ -159,6 +161,7 @@ Remember, it's essential to remove or reuse the current code of the application.
 
 ## Technologies
 * Programming Languages: `Python`.
+* 
 * Libraries: `os`, `sys` and `random`.
 
 ## Features 
