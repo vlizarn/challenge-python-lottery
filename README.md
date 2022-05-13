@@ -103,7 +103,7 @@ The `title` variable matches the `"Simple"` string. If the `if` statement match 
 
 #### Example 2 - Game constructor
 
-The `Game` constructor needs arguments for all parameters to perform correctly. In this case, the `Game` constructor is responsible for the data request provided for the `Lottery` class. These two constructors have default parameters that mustn't require arguments to the parameters.
+The `Game` constructor needs arguments for all parameters to perform correctly. In this case, the `Game` constructor is responsible for the data request provided for the `Lottery` constructor. These two constructors have default parameters that mustn't require arguments to the parameters.
 
 ```python
 
