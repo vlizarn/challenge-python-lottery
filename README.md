@@ -140,7 +140,7 @@ app.Game(
 
 ```
 
-The current code executed in the compiler will get the length of the random values for the `lTimesConjunt` and not for the `lTimesStar` parameter.
+The current code executed in the compiler will get the length of the random values for the `lTimesConjunt` and not for the `lTimesStar`.
 
 ```python
 
