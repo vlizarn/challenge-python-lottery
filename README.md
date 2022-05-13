@@ -161,7 +161,6 @@ Remember, it's essential to remove or reuse the current code of the application.
 
 ## Technologies
 * Programming Languages: `Python`.
-* 
 * Libraries: `os`, `sys` and `random`.
 
 ## Features 
