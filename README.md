@@ -103,7 +103,7 @@ The `title` variable matches the `"Simple"` string. If the `if` statement match 
 
 #### Example 2 - Game constructor
 
-The `Game` constructor needs arguments for all parameters to perform correctly. In this case, the `Game` constructor is responsible for the data request provided for the `Lottery` constructor. These two constructors have default parameters that mustn't require arguments provided by the user to perform.
+The `Game` constructor needs arguments for all parameters to perform correctly. In this case, the `Game` constructor is responsible for the data request provided for the `Lottery` constructor. These two constructors have default parameters that mustn't require arguments requested by the user to perform.
 
 ```python
 
@@ -127,7 +127,7 @@ The `lTimes` is responsible for the number of bets, `lTimesConjunt` and `lTimesS
 
 #### Example 3 - Code Abridgment
 
-The current code example uses `lmode` and `lTimes` parameters to set arguments such as `Auto` includes the bet mode choices and the value `10` that match the number of bets. Remember to set inside of the while loop the code. When running the code in the compiler will get ten bets using the `Auto` game input mode with the default arguments of the constructor.
+The current code example uses `lmode` and `lTimes` parameters to set arguments such as `Auto` includes the bet mode choices and the value `10` that match the number of bets. Remember to define inside of the while loop the code. When running the code inside of the compiler will get ten times of bet using the `Auto` game input mode with the default arguments of the constructor.
 
 ```python
 
