@@ -101,7 +101,7 @@ else:
 
 The `title` variable matches the `"Simple"` string. If the `if` statement match is equal, the `Program` constructor with the bet method will be executed inside the `if` statement. The `Program` constructor inside the `if` has five arguments, and the `elif` statement contains seven arguments on the constructor. Every parameter is changeable and permits the reuse of the `Program` constructor to create a new bet mode for the lottery game. For the least, if all top statements don't match the code, the program will return a message with an error explanation.
 
-#### Example 2 - Game constructor
+#### Example 2 - Game Constructor
 
 The `Game` constructor needs arguments for all parameters to perform correctly. In this case, the `Game` constructor is responsible for the data request provided for the `Lottery` constructor. These two constructors have default parameters that mustn't require arguments requested by the user to perform.
 
