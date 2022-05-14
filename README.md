@@ -99,11 +99,11 @@ else:
      self.print('msg', 'lottery', 2)
 ```
 
-The `title` variable matches the `"Simple"` string. If the `if` statement match is equal, the `Program` constructor with the bet method will be executed inside the `if` statement. The `Program` constructor inside the `if` has five arguments, and the `elif` statement contains seven arguments on the constructor. Every parameter is changeable and permits the reuse of the arguments to create a new bet mode for the lottery game. For the least, if all top statements don't match the code, the program will return a message with an error explanation.
+The `title` variable matches the `"Simple"` string. If the `if` statement match is equal, the `Program` constructor with the bet method will be executed inside the `if` statement. The `Program` constructor inside the `if` has five arguments, and the `elif` statement contains seven arguments on the constructor. Every parameter is changeable and permits the reuse of the `Program` constructor to create a new bet mode for the lottery game. For the least, if all top statements don't match the code, the program will return a message with an error explanation.
 
-#### Example 2 - Game constructor
+#### Example 2 - Game Constructor
 
-The `Game` constructor needs arguments for all parameters to perform correctly. In this case, the `Game` constructor is responsible for the data request provided for the `Lottery` class. These two constructors have default parameters that mustn't require arguments to the parameters.
+The `Game` constructor needs arguments for all parameters to perform correctly. In this case, the `Game` constructor is responsible for the data request provided for the `Lottery` constructor. These two constructors have default parameters that mustn't require arguments requested by the user to perform.
 
 ```python
 
@@ -127,7 +127,7 @@ The `lTimes` is responsible for the number of bets, `lTimesConjunt` and `lTimesS
 
 #### Example 3 - Code Abridgment
 
-The current code example uses `lmode` and `lTimes` parameters to set arguments such as `Auto` includes the bet mode choices and the value `10` that match the number of bets. The code represented the current example in the `run` method on the `Program` class. Remember to set inside of the while loop the code. When running the code in the compiler will get ten bets using the `Auto` game input mode and the default arguments of the constructor.
+The current code example uses `lmode` and `lTimes` parameters to set arguments such as `Auto` includes the bet mode choices and the value `10` that match the number of bets. Remember to define inside of the while loop the code. When running, the compiler will get the result ten times the bet using the `Auto` game input mode with the default arguments of the constructor.
 
 ```python
 
@@ -140,7 +140,7 @@ app.Game(
 
 ```
 
-The current code executed in the compiler will get the length of the random values for the `lTimesConjunt` and not for the `lTimesStar` parameter.
+The current code executed in the compiler will get the length of the random values for the `lTimesConjunt` and not for the `lTimesStar`.
 
 ```python
 
@@ -161,7 +161,6 @@ Remember, it's essential to remove or reuse the current code of the application.
 
 ## Technologies
 * Programming Languages: `Python`.
-* 
 * Libraries: `os`, `sys` and `random`.
 
 ## Features 
