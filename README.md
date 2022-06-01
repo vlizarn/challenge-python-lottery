@@ -34,7 +34,7 @@ All essential information about the project, you can be found here.
 
 ### Installation
 
-To install it locally in your machine the application.
+Install it locally on your machine.
 
 #### For Windows, Linux, and macOS
 
