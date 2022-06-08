@@ -78,7 +78,7 @@ This section contains examples of the descriptions of functionalities and consti
 
 The current code has three variables, and every variable contains an input method with a message inside it. The first variable is the `title` and permits inserting a `title` name for your new bet mode. The `mode` variable only accepts an insert game input mode that should only include an `Auto` or `Manual` mode. The last variable is `amount` and corresponds to writing the number of bets equal or higher than one and not equal or less than zero to execute the code correctly.
 
-main.py file
+**main.py file**
 
 ```python
 title = input(self.message.reportDict['request'][1])
@@ -107,7 +107,7 @@ The `title` variable matches the `"Simple"` string. If the `if` statement match 
 
 The `Game` constructor needs arguments for all parameters to perform correctly. In this case, the `Game` constructor is responsible for the data request provided for the `Lottery` constructor. These two constructors have default parameters that mustn't require arguments requested by the user to perform.
 
-main.py file
+**main.py file**
 
 ```python
 
@@ -133,7 +133,7 @@ The `lTimes` is responsible for the number of bets, `lTimesConjunt` and `lTimesS
 
 The current code example uses `lmode` and `lTimes` parameters to set arguments such as `Auto` includes the bet mode choices and the value `10` that match the number of bets. Remember to define inside of the while loop the code. When running, the compiler will get the result ten times the bet using the `Auto` game input mode with the default arguments of the constructor.
 
-main.py file
+**main.py file**
 
 ```python
 
@@ -148,7 +148,7 @@ app.Game(
 
 The current code executed in the compiler will get the length of the random values for the `lTimesConjunt` and not for the `lTimesStar`.
 
-main.py file
+**main.py file**
 
 ```python
 
@@ -178,4 +178,4 @@ Remember, it's essential to remove or reuse the current code of the application.
 * The code can be reused to create new bet modes and modify the current ones.
 
 ## Contributors
-* [ **vlizarn** ](https://github.com/vlizarn)
+* [ **Ryan Pontes** ](https://github.com/vlizarn)
