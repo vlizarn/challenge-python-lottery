@@ -178,4 +178,4 @@ Remember, it's essential to remove or reuse the current code of the application.
 * The code can be reused to create new bet modes and modify the current ones.
 
 ## Contributors
-* [ **vlizarn** ](https://github.com/vlizarn)
+* [ **Ryan Pontes** ](https://github.com/vlizarn)
